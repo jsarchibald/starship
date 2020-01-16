@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link href="main.css" rel="stylesheet">
+		<title>STARSHIP</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="generate.js"></script>
+		<script src="movement.js"></script>
+		<script src="passe-simple.js"></script>
+		<script src="quiz.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="rocket-container">
+				<div class="rocket-wrap">
+					<div class="rocket"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="title">
+			<h1>STARSHIP</h1>
+		</div>
+		
+		<div class="question-cont">
+			<div class="question-box">
+				<h2>
+					> Conjugate the word
+					&quot;<span id="word-instr"></span>&quot;
+					in the passé simple using the noun
+					&quot;<span id="noun-instr"></span>&quot;:
+				</h2>
+				<input type="text" id="answer" placeholder="Type answer here"></input>
+				<button id="check-conjugation">Go</button>
+				<span id="correct-wrong"></span>
+				
+				<div class="accents">
+					<button id="ç">ç</button>
+					<button id="é">é</button>
+					<button id="î">î</button>
+					<button id="û">û</button>
+				</div>
+			</div>
+		</div>
+		<div class="timer-points">
+			0
+		</div>
+		<div class="menu">
+			<span class="lives">3x</span>
+			<button id="help">Help</button>
+			<button id="options">Options</button>
+			<button id="high-scores">High Scores</button>
+		</div>
+		
+		<div class="start">
+			Start
+		</div>
+		
+		<div class="game-over">
+			Game Over!
+			<div>
+				<label for="name">Type your name to save to the scores list:</label>
+				<br>
+				<input type="text" id="users-name" placeholder="Name"></input>
+				<button id="save-score">Save Score</button>
+			</div>
+		</div>
+		
+		<div class="other-cont">
+			<div class="help">
+				<h2>How to Play</h2>
+				<ol>
+					<li>
+						You are the commander of a spaceship. Your job is to avoid
+						the space debris flying at you. Use the left and right
+						arrow keys on your keyboard to move your ship.
+					</li>
+					<li>
+						For each piece of debris you avoid, you receive a random
+						number of points between 50 and 150. Your score is in the
+						top left corner.
+					</li>
+					<li>
+						If you are hit by space debris, you will have 20 seconds
+						to conjugate an irregular verb in the passé simple.
+					</li>
+					<li>
+						You have three lives. You lose one life for each question
+						you answer incorrectly.
+					</li>
+					<li>
+						You cannot pause the game.
+					</li>
+				</ol>
+				<p>Game by Joshua Archibald. &copy; 2015.</p>
+			</div>
+			<div class="options">
+				<h2>Options</h2>
+				<input type="checkbox" id="music" value="true"></input>
+				<label for="music">Music</label>
+				<p>Music: <a href="https://www.youtube.com/watch?v=i_ekJJ0jytw" target="_blank">Mad21Equynox/YouTube</a> &copy; 2010.</p>
+			</div>
+			<div class="high-scores">
+				<h2>High Scores</h2>
+				<table id="high-scores-table">
+					<tr>
+						<td>Name</td>
+						<td>Score</td>
+						<td>Time</td>
+					</tr>
+				</table>
+			</div>
+			<div class="close-btn">
+				<button id="close-extra">Close</button>
+			</div>
+		</div>
+		<audio src="star-wars.mp3" type="audio/mpeg" id="star-wars" loop></audio>
+	</body>
+</html>
